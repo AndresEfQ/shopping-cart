@@ -7,6 +7,7 @@ import { FaSearch } from "react-icons/fa";
 export default function Shop() {
 
   const [sets, setSets] = useState();
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     fetch("https://api.magicthegathering.io/v1/sets")
@@ -18,14 +19,21 @@ export default function Shop() {
     .catch(err => console.log(err))
   }, []);
 
-  useEffect(() => {console.log(sets)}, [sets]);
+  const searchSets = (query, array) => {
+    return array.filter(element => element.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+  }
+  
+  const handleSearchInputChange = (e) => {
+    setSearchInput(e.target.value);
+    setSets(prevSet => searchSets(e.target.value, prevSet));
+  }
 
   return (
     <ShopDiv>
-      <SearchBar type="search" placeholder="&#xF002 Search Sets" />
+      <SearchBar type="search" placeholder="Search Sets" value={searchInput} onChange={handleSearchInputChange} />
       <FaSearch color="#777"/>
       <SideBar>
-        <SimpleBar style={{maxHeight: '80vh', width: '15vw', scrollbarBackground: '#fff'}}>
+        <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>
           {sets
             ? sets.map(set => <SetSelector>{set.name}</SetSelector>)
             : <span>loading</span>}
