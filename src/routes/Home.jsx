@@ -6,7 +6,7 @@ export default function Home() {
     <Container>
       <Cell>
         <div>
-          <p>The place to satisfy all your MTG cards needs</p>
+          <p>The place to find all your MTG cards requirements</p>
           <Link to={"/shopping-cart/shop"}>
             <button>Shop now</button>
           </Link>

@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from "./routes/Root";
 import GlobalStyle from "./globalStyle"
 import Home from "./routes/Home";
-/*import Shop from "./routes/shop";
-import Contact from "./routes/contact"; */
+import Shop from "./routes/Shop";
+/*import Contact from "./routes/contact"; */
 
 function App() {
 
@@ -17,11 +17,11 @@ function App() {
           path: "/shopping-cart/home",
           element: <Home />,
         },
-        /*{
+        {
           path: "/shopping-cart/shop",
           element: <Shop />,
         },
-        {
+        /*{
           path: "/shopping-cart/contact",
           element: <Contact />
         }*/
