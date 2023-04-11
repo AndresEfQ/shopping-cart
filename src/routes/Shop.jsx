@@ -20,7 +20,7 @@ export default function Shop() {
   }, []);
 
   const searchSets = (query, array) => {
-    return array.filter(element => element.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+    return array.filter(element => element.name.toLowerCase().indexOf(query.toLowerCase()) !== -1);
   }
   
   const handleSearchInputChange = (e) => {
@@ -30,7 +30,7 @@ export default function Shop() {
 
   return (
     <ShopDiv>
-      <SearchBar type="search" placeholder="Search Sets" value={searchInput} onChange={handleSearchInputChange} />
+      <SearchBar type="search" placeholder="Search Sets" onChange={handleSearchInputChange} />
       <FaSearch color="#777"/>
       <SideBar>
         <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>
