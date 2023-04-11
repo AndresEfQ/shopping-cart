@@ -6,6 +6,7 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Shop() {
 
+  const [apiResponse, setApiResponse] = useState();
   const [sets, setSets] = useState();
   const [searchInput, setSearchInput] = useState("");
 
@@ -13,7 +14,7 @@ export default function Shop() {
     fetch("https://api.magicthegathering.io/v1/sets")
     .then(response => response.json())
     .then(response => {
-      console.log(response.sets);
+      setApiResponse(response.sets);
       setSets(response.sets);
     })
     .catch(err => console.log(err))
@@ -25,7 +26,7 @@ export default function Shop() {
   
   const handleSearchInputChange = (e) => {
     setSearchInput(e.target.value);
-    setSets(prevSet => searchSets(e.target.value, prevSet));
+    setSets(searchSets(e.target.value, apiResponse));
   }
 
   return (
