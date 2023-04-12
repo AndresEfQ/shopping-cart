@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component Renders correctly 1`] = `
+<div>
+  <div
+    class="sc-beqWaB cybTHZ"
+  >
+    <div
+      class="sc-gueYoa ttHSZ"
+    >
+      <div>
+        <p>
+          The place to find all your MTG cards requirements
+        </p>
+        <a
+          href="/shopping-cart/shop"
+        >
+          <button>
+            Shop now
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
