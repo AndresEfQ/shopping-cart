@@ -31,7 +31,7 @@ export default function Shop() {
 
   return (
     <ShopDiv>
-      <SearchBar type="search" placeholder="Search Sets" onChange={handleSearchInputChange} />
+      <SearchBar type="search" placeholder="Search Sets" onChange={handleSearchInputChange} value={searchInput} />
       <FaSearch color="#777"/>
       <SideBar>
         <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>

@@ -9,6 +9,7 @@ exports[`Shop component Renders correctly 1`] = `
       class="sc-dmqHEX iVPWa-d"
       placeholder="Search Sets"
       type="search"
+      value=""
     />
     <svg
       color="#777"
