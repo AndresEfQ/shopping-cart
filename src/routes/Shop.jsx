@@ -3,11 +3,13 @@ import styled from "styled-components";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css"
 import { FaSearch } from "react-icons/fa";
+import CardsList from "../components/CardsList";
 
 export default function Shop() {
 
   const [apiResponse, setApiResponse] = useState();
   const [sets, setSets] = useState();
+  const [cards, setCards] = useState();
   const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
@@ -16,6 +18,7 @@ export default function Shop() {
     .then(response => {
       setApiResponse(response.sets);
       setSets(response.sets);
+      console.log(response);
     })
     .catch(err => console.log(err))
   }, []);
@@ -29,17 +32,39 @@ export default function Shop() {
     setSets(searchSets(e.target.value, apiResponse));
   }
 
+  const handleSelectSet = (e) => {
+    console.log(e.target.id)
+    fetch(`https://api.magicthegathering.io/v1/cards?set=${e.target.id}&random=true`)
+    .then(response => response.json())
+    .then(response => {
+      console.log(response)
+      setCards(response.cards)
+    });
+  }
+
   return (
     <ShopDiv>
-      <SearchBar type="search" placeholder="Search Sets" onChange={handleSearchInputChange} value={searchInput} />
+      <SearchBar 
+        type="search" 
+        placeholder="Search Sets" 
+        onChange={handleSearchInputChange} 
+        value={searchInput} 
+      />
       <FaSearch color="#777"/>
       <SideBar>
         <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>
           {sets
-            ? sets.map(set => <SetSelector>{set.name}</SetSelector>)
+            ? sets.map(set => {
+              return (
+                <SetSelector 
+                  key={set.code} 
+                  id={set.code} 
+                  onClick={handleSelectSet}>{set.name}
+                </SetSelector>)})
             : <span>loading</span>}
         </SimpleBar>
       </SideBar>
+      <CardsList cards={cards} />
     </ShopDiv>
   )
 }
