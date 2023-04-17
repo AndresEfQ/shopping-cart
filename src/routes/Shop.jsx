@@ -13,14 +13,23 @@ export default function Shop() {
   const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
+    fetch(`https://api.magicthegathering.io/v1/cards?random=true&pageSize=12`)
+    .then(response => response.json())
+    .then(response => {
+      console.log(response);
+      setCards(response.cards);
+    })
+    .catch(err => console.log(err));
+
     fetch("https://api.magicthegathering.io/v1/sets")
     .then(response => response.json())
     .then(response => {
       setApiResponse(response.sets);
       setSets(response.sets);
-      console.log(response);
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err));
+
+
   }, []);
 
   const searchSets = (query, array) => {
@@ -34,36 +43,38 @@ export default function Shop() {
 
   const handleSelectSet = (e) => {
     console.log(e.target.id)
-    fetch(`https://api.magicthegathering.io/v1/cards?set=${e.target.id}&random=true`)
+    fetch(`https://api.magicthegathering.io/v1/cards?set=${e.target.id}&random=true&pageSize=12`)
     .then(response => response.json())
     .then(response => {
-      console.log(response)
       setCards(response.cards)
-    });
+    })
+    .catch(err => console.log(err));
   }
 
   return (
     <ShopDiv>
-      <SearchBar 
-        type="search" 
-        placeholder="Search Sets" 
-        onChange={handleSearchInputChange} 
-        value={searchInput} 
-      />
-      <FaSearch color="#777"/>
-      <SideBar>
-        <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>
-          {sets
-            ? sets.map(set => {
-              return (
-                <SetSelector 
-                  key={set.code} 
-                  id={set.code} 
-                  onClick={handleSelectSet}>{set.name}
-                </SetSelector>)})
-            : <span>loading</span>}
-        </SimpleBar>
-      </SideBar>
+      <div>
+        <SearchBar
+          type="search"
+          placeholder="Search Sets"
+          onChange={handleSearchInputChange}
+          value={searchInput}
+        />
+        <FaSearch color="#777"/>
+        <SideBar>
+          <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>
+            {sets
+              ? sets.map(set => {
+                return (
+                  <SetSelector
+                    key={set.code}
+                    id={set.code}
+                    onClick={handleSelectSet}>{set.name}
+                  </SetSelector>)})
+              : <span>loading</span>}
+          </SimpleBar>
+        </SideBar>
+      </div>
       <CardsList cards={cards} />
     </ShopDiv>
   )
@@ -72,8 +83,9 @@ export default function Shop() {
 const ShopDiv = styled.div`
 
   position: relative;
+  display: flex;
 
-  svg {
+  & > div > svg {
     position: absolute;
     top: 2.6vh;
     left: 2rem;
@@ -81,7 +93,7 @@ const ShopDiv = styled.div`
 `
 
 const SideBar = styled.aside`
-  height: 81vh;
+  height: 80vh;
   width: 15vw;
   margin-left: 1rem;
   margin-top: 2vh;

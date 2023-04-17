@@ -1,5 +1,5 @@
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, redirect } from 'react-router-dom';
 import Root from "./routes/Root";
 import GlobalStyle from "./globalStyle"
 import Home from "./routes/Home";
@@ -10,15 +10,14 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/shopping-cart",
       element: <Root />,
        children: [
         {
-          path: "/shopping-cart/home",
+          path: "/",
           element: <Home />,
         },
         {
-          path: "/shopping-cart/shop",
+          path: "/shop",
           element: <Shop />,
         },
         /*{
