@@ -3,23 +3,19 @@ import styled from "styled-components";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css"
 import { FaSearch } from "react-icons/fa";
+import DotLoader from "react-spinners/DotLoader";
 import CardsList from "../components/CardsList";
+import backupData from "../assets/cache";
 
 export default function Shop() {
 
   const [apiResponse, setApiResponse] = useState();
   const [sets, setSets] = useState();
-  const [cards, setCards] = useState();
+  const [cards, setCards] = useState(backupData.cards);
+  const [isLoadingCards, setIsLoadingCards] = useState(false);
   const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
-    fetch(`https://api.magicthegathering.io/v1/cards?random=true&pageSize=12`)
-    .then(response => response.json())
-    .then(response => {
-      console.log(response);
-      setCards(response.cards);
-    })
-    .catch(err => console.log(err));
 
     fetch("https://api.magicthegathering.io/v1/sets")
     .then(response => response.json())
@@ -28,7 +24,6 @@ export default function Shop() {
       setSets(response.sets);
     })
     .catch(err => console.log(err));
-
 
   }, []);
 
@@ -43,10 +38,13 @@ export default function Shop() {
 
   const handleSelectSet = (e) => {
     console.log(e.target.id)
+    setIsLoadingCards(true);
     fetch(`https://api.magicthegathering.io/v1/cards?set=${e.target.id}&random=true&pageSize=12`)
     .then(response => response.json())
     .then(response => {
-      setCards(response.cards)
+      setCards(response.cards);
+      setIsLoadingCards(false);
+      console.log(response.cards)
     })
     .catch(err => console.log(err));
   }
@@ -75,7 +73,8 @@ export default function Shop() {
           </SimpleBar>
         </SideBar>
       </div>
-      <CardsList cards={cards} />
+      {cards ? <CardsList cards={cards} /> : <Shade><DotLoader /></Shade>}
+      {isLoadingCards && <Shade><DotLoader color="rgb(207,5,179)" /></Shade>}            
     </ShopDiv>
   )
 }
@@ -121,4 +120,16 @@ const SetSelector = styled.button`
   white-space: nowrap;
   text-overflow: ellipsis;
   text-align: left;
+  cursor: pointer;
+`;
+
+const Shade = styled.div`
+  height: 88vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.8);
+  z-index: 3;
 `;

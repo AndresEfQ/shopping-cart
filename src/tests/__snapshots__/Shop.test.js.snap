@@ -3,11 +3,11 @@
 exports[`Shop component Renders correctly 1`] = `
 <div>
   <div
-    class="sc-gueYoa gViBJe"
+    class="sc-dmqHEX iZZeSW"
   >
     <div>
       <input
-        class="sc-hLseeU dumsRW"
+        class="sc-eDDNvR eEqvGX"
         placeholder="Search Sets"
         type="search"
         value=""
@@ -28,7 +28,7 @@ exports[`Shop component Renders correctly 1`] = `
         />
       </svg>
       <aside
-        class="sc-dmqHEX kupOOX"
+        class="sc-hLseeU igTKrR"
       >
         <div
           data-simplebar="init"
@@ -95,11 +95,680 @@ exports[`Shop component Renders correctly 1`] = `
       </aside>
     </div>
     <div
-      class="sc-beqWaB juAkrG"
+      class="sc-gueYoa dMoZjR"
     >
-      <span>
-        ...loading
-      </span>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Liege of the Axe"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=39603&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Goblin Dynamo"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42274&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Mistform Sliver"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42037&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Earthblighter"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42171&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Lowland Tracker"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45131&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Goblin Grappler"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45125&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Bloodstoke Howler"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44209&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Ward Sliver"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44296&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Hunter Sliver"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44772&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Beacon of Destiny"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44496&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Mistform Seaswift"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=43721&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-beqWaB eSVJYC"
+      >
+        <img
+          alt="Cloudreach Cavalry"
+          src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45839&type=card"
+        />
+        <div>
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            value="0"
+          />
+          <svg
+            fill="none"
+            height="25"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+              fill="currentColor"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

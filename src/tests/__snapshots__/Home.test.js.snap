@@ -13,7 +13,7 @@ exports[`Home component Renders correctly 1`] = `
           The place to find all your MTG cards requirements
         </p>
         <a
-          href="/shopping-cart/shop"
+          href="/shop"
         >
           <button>
             Shop now

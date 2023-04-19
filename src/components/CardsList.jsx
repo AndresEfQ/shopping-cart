@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { useState } from "react";
 import Card from "./Card";
 
 export default function CardsList(props) {
 
   return (
     <CardList>
-      {!props.cards ? <span>...loading</span> : props.cards.map(card => <Card id={card.id} card={card} />)}
+      {props.cards.map(card => <Card id={card.id} card={card} />)}
     </CardList>
   )
 }
