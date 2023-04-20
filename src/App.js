@@ -8,6 +8,11 @@ import Shop from "./routes/Shop";
 
 function App() {
 
+  const handleAddToCart = (e, itemsNumb) => {
+    console.log(e.target.dataset.name)
+    console.log(e.target.dataset.img)
+  };
+
   const router = createBrowserRouter([
     {
       element: <Root />,
@@ -18,7 +23,7 @@ function App() {
         },
         {
           path: "/shop",
-          element: <Shop />,
+          element: <Shop handleAddToCart={handleAddToCart}/>,
         },
         /*{
           path: "/shopping-cart/contact",

@@ -7,7 +7,7 @@ import DotLoader from "react-spinners/DotLoader";
 import CardsList from "../components/CardsList";
 import backupData from "../assets/cache";
 
-export default function Shop() {
+export default function Shop({handleAddToCart}) {
 
   const [apiResponse, setApiResponse] = useState();
   const [sets, setSets] = useState();
@@ -73,7 +73,7 @@ export default function Shop() {
           </SimpleBar>
         </SideBar>
       </div>
-      {cards ? <CardsList cards={cards} /> : <Shade><DotLoader /></Shade>}
+      {cards ? <CardsList cards={cards} handleAddToCart={handleAddToCart} /> : <Shade><DotLoader /></Shade>}
       {isLoadingCards && <Shade><DotLoader color="rgb(207,5,179)" /></Shade>}            
     </ShopDiv>
   )

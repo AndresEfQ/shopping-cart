@@ -5,7 +5,7 @@ export default function CardsList(props) {
 
   return (
     <CardList>
-      {props.cards.map(card => <Card id={card.id} card={card} />)}
+      {props.cards.map(card => <Card id={card.id} card={card} handleAddToCart={props.handleAddToCart} />)}
     </CardList>
   )
 }

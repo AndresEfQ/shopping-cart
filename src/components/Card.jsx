@@ -21,12 +21,15 @@ export default function Card(props) {
   return (
     <CardDiv>
       <img src={props.card.imageUrl || 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=5716299&type=card'} alt={props.card.name} />
-      {/* <span>{props.card.name}</span> */}
       <div>
         <CgRemoveR size={25} onClick={removeItem} />
         <input value={itemsNumb} onChange={handleManualInput} />
         <CgAddR size={25} onClick={addItem} />
-        <button>Add to cart</button>
+        <button 
+          onClick={(e) => props.handleAddToCart(e,itemsNumb)}
+          data-name={props.card.name}
+          data-img={props.card.imageUrl}
+        >Add to cart</button>
       </div>
     </CardDiv>
   )
