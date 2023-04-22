@@ -58,7 +58,7 @@ export default function Shop({handleAddToCart}) {
           onChange={handleSearchInputChange}
           value={searchInput}
         />
-        <FaSearch color="#777"/>
+        <FaSearch color="var(--grey)"/>
         <SideBar>
           <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>
             {sets
@@ -73,8 +73,8 @@ export default function Shop({handleAddToCart}) {
           </SimpleBar>
         </SideBar>
       </div>
-      {cards ? <CardsList cards={cards} handleAddToCart={handleAddToCart} /> : <Shade><DotLoader /></Shade>}
-      {isLoadingCards && <Shade><DotLoader color="rgb(207,5,179)" /></Shade>}            
+      {cards ? <CardsList cards={cards} handleAddToCart={handleAddToCart} /> : <Shade><DotLoader color="var(--main)" /></Shade>}
+      {isLoadingCards && <Shade><DotLoader color="var(--main)" /></Shade>}            
     </ShopDiv>
   )
 }
@@ -100,7 +100,7 @@ const SideBar = styled.aside`
   display: flex;
   flex-direction: column;
   overflow: auto;
-  background-color: rgb(47, 13, 68, 0.6);
+  background-color: var(--secondary-op60);
   scrollbar-width: none;
   -ms-overflow-style: none;
 `;
@@ -130,6 +130,6 @@ const Shade = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255,255,255,0.8);
+  background: var(--op80);
   z-index: 3;
 `;

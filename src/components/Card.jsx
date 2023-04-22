@@ -2,9 +2,15 @@ import { useState } from "react";
 import { CgAddR, CgRemoveR } from "react-icons/cg"
 import styled from "styled-components";
 
-export default function Card(props) {
+export default function Card({id, card, handleAddToCart}) {
 
   const [itemsNumb, setItemsNumb] = useState(0);
+
+  const price = {
+    Common: 0.5,
+    Uncommon: 1.2,
+    Rare: 3,
+  }
 
   const addItem = () => {
     setItemsNumb(prevItemsNum => prevItemsNum + 1);
@@ -20,15 +26,24 @@ export default function Card(props) {
 
   return (
     <CardDiv>
-      <img src={props.card.imageUrl || 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=5716299&type=card'} alt={props.card.name} />
+      <img src={card.imageUrl || 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=5716299&type=card'} alt={card.name} />
+      <ul>
+        <li>
+          <h3>{card.name}</h3>
+        </li>
+        <li>
+          <p>{new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(price[card.rarity])}</p>
+        </li>
+      </ul>
       <div>
         <CgRemoveR size={25} onClick={removeItem} />
         <input value={itemsNumb} onChange={handleManualInput} />
         <CgAddR size={25} onClick={addItem} />
         <button 
-          onClick={(e) => props.handleAddToCart(e,itemsNumb)}
-          data-name={props.card.name}
-          data-img={props.card.imageUrl}
+          onClick={(e) => handleAddToCart(e,itemsNumb)}
+          data-name={card.name}
+          data-img={card.imageUrl}
+          data-price={price[card.rarity]}
         >Add to cart</button>
       </div>
     </CardDiv>
@@ -37,12 +52,24 @@ export default function Card(props) {
 
 const CardDiv = styled.div`
   padding: 0 0.5rem;
-  background-color: rgba(255,255,255,0.5);
+  background-color: var(--op80);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
+  & > img {
+    width: 80%;
+  }
+
+  & ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   & svg {
     position: relative;
@@ -52,7 +79,7 @@ const CardDiv = styled.div`
   }
 
   & svg:active {
-    color: rgb(207,5,179);
+    color: var(--main);
   }
 
   & > div {
@@ -68,9 +95,9 @@ const CardDiv = styled.div`
   }
 
   button {
-    background-color: rgb(207,5,179);
-    background: linear-gradient(13deg, rgba(207,5,179,1) 0%, rgba(27,0,65,1) 100%);
-    color: #fff;
+    background-color: var(--main);
+    background: linear-gradient(13deg, var(--main) 0%, var(--secondary) 100%);
+    color: white;
     font-weight: bold;
     border: none;
     border-radius: 7px;

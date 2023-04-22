@@ -6,7 +6,7 @@ export default function Home() {
     <Container>
       <Cell>
         <div>
-          <p>The place to find all your MTG cards requirements</p>
+          <p>The place to find all your MTG cards</p>
           <Link to={"/shop"}>
             <button>Shop now</button>
           </Link>
@@ -17,11 +17,11 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  height: 80%;
+  height: 90%;
   margin-left: 6rem;
   font-size: 4rem;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 10px rgb(0, 0, 0);
+  color: white;
+  text-shadow: 0 0 10px black;
   display: flex;
   flex-direction: column;
   justify-content: center;

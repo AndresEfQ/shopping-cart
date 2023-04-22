@@ -9,7 +9,7 @@ export default function Footer() {
   )
 }
 
-const Container = styled.div`
+const Container = styled.footer`
   font-size: 1.5rem;
   width: 100%;
   position: fixed;

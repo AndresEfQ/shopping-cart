@@ -1,18 +1,18 @@
 import styled from "styled-components";
 import Card from "./Card";
 
-export default function CardsList(props) {
+export default function CardsList({cards, handleAddToCart}) {
 
   return (
     <CardList>
-      {props.cards.map(card => <Card id={card.id} card={card} handleAddToCart={props.handleAddToCart} />)}
+      {cards.map(card => <Card id={card.id} card={card} handleAddToCart={handleAddToCart} />)}
     </CardList>
   )
 }
 
 const CardList = styled.div`
   height: 80vh;
-  width: 85vw;
+  width: 82vw;
   margin: 1rem;
   align-self: flex-start;
   display: grid;
