@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import Card from "./Card";
 
-export default function CardsList({cards, handleAddToCart}) {
+export default function CardsList({cards}) {
 
   return (
     <CardList>
-      {cards.map(card => <Card id={card.id} card={card} handleAddToCart={handleAddToCart} />)}
+      {cards.map(card => <Card id={card.id} card={card} />)}
     </CardList>
   )
 }

@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Cart from "../components/Cart";
-import { useState } from "react";
+import styled from "styled-components";
 
-export default function Root({itemsNumb, cart}) {
+export default function Root({cart}) {
 
   const [cartIsVisible, setCartIsVisible] = useState(false);
 
@@ -14,16 +14,14 @@ export default function Root({itemsNumb, cart}) {
   }
 
   return (
-    <>
-      <Background>
-        <Header itemsNumb={itemsNumb} toggleCart={toggleCart} />
-        <div>
-          <Outlet />
-          {cartIsVisible && <Cart cart={cart} />}
-        </div>
-        <Footer />
-      </Background>
-    </>
+    <Background>
+      <Header toggleCart={toggleCart} />
+      <div>
+        <Outlet />
+        {cartIsVisible && <Cart cart={cart} />}
+      </div>
+      <Footer />
+    </Background>
   )
 }
 

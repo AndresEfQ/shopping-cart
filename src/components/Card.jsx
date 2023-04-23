@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { CgAddR, CgRemoveR } from "react-icons/cg"
 import styled from "styled-components";
 
-export default function Card({id, card, handleAddToCart}) {
+export default function Card({id, card}) {
 
   const [itemsNumb, setItemsNumb] = useState(0);
+  const { cart, setCart } = useContext(CartContext);
 
   const price = {
     Common: 0.5,
@@ -13,15 +15,40 @@ export default function Card({id, card, handleAddToCart}) {
   }
 
   const addItem = () => {
-    setItemsNumb(prevItemsNum => prevItemsNum + 1);
+    setItemsNumb(prevItemsNum => prevItemsNum < 1 ? 1 : prevItemsNum + 1);
   }
 
   const removeItem = () => {
-    setItemsNumb(prevItemsNum => prevItemsNum - 1);
+    setItemsNumb(prevItemsNum => prevItemsNum < 1 ? 0 : prevItemsNum - 1);
   }
 
   const handleManualInput = (e) => {
     setItemsNumb(e.target.value);
+  }
+
+  const handleAddToCart = (e, itemsNumb) => {
+    console.log(e)
+    if (!cart.items.find(item => item.name === e.target.dataset.name)) {
+      setCart(prevCart => ({
+        items: [...prevCart.items, {
+          name: e.target.dataset.name, 
+          img: e.target.dataset.img,
+          number: itemsNumb,
+          price: e.target.dataset.price,
+        }]
+      }))
+    } else {
+      setCart(prevCart => ({
+        items: prevCart.items.map(item => {
+          if (item.name === e.target.dataset.name) {
+            return ({...item, number: item.number + itemsNumb});
+          } else {
+            return item;
+          }
+        })
+      }))
+    }
+    console.log(cart);
   }
 
   return (
@@ -39,12 +66,12 @@ export default function Card({id, card, handleAddToCart}) {
         <CgRemoveR size={25} onClick={removeItem} />
         <input value={itemsNumb} onChange={handleManualInput} />
         <CgAddR size={25} onClick={addItem} />
-        <button 
-          onClick={(e) => handleAddToCart(e,itemsNumb)}
-          data-name={card.name}
-          data-img={card.imageUrl}
-          data-price={price[card.rarity]}
-        >Add to cart</button>
+          <button
+            onClick={(e) => handleAddToCart(e,itemsNumb)}
+            data-name={card.name}
+            data-img={card.imageUrl}
+            data-price={price[card.rarity]}
+          >Add to cart</button>
       </div>
     </CardDiv>
   )
@@ -80,13 +107,14 @@ const CardDiv = styled.div`
 
   & svg:active {
     color: var(--main);
+    transform: scale(0.95);
   }
 
   & > div {
     display: flex;
   }
 
-  input {
+  & input {
     width: 2rem;
     margin: 0 0.5rem;
     text-align: center;
@@ -94,7 +122,7 @@ const CardDiv = styled.div`
     border: none;
   }
 
-  button {
+  & button {
     background-color: var(--main);
     background: linear-gradient(13deg, var(--main) 0%, var(--secondary) 100%);
     color: white;
@@ -103,5 +131,11 @@ const CardDiv = styled.div`
     border-radius: 7px;
     padding: 4px 8px;
     margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  & button:active {
+    color: var(--grey);
+    transform: scale(0.95);
   }
 `;
