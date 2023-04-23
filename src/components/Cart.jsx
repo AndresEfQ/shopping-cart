@@ -26,6 +26,7 @@ export default function Cart() {
         </InfoDiv>
         <FaTrashAlt color="var(--grey)" />
       </CartItem>)}
+      
     </CartDiv>
   )
 }
