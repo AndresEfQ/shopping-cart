@@ -5,11 +5,12 @@ import Footer from "../components/Footer";
 import Cart from "../components/Cart";
 import styled from "styled-components";
 
-export default function Root({cart}) {
+export default function Root() {
 
   const [cartIsVisible, setCartIsVisible] = useState(false);
 
-  const toggleCart = () => {
+  const toggleCart = (e) => {
+    e.stopPropagation();
     setCartIsVisible((prevCartIsVisible => !prevCartIsVisible));
   }
 
@@ -18,7 +19,7 @@ export default function Root({cart}) {
       <Header toggleCart={toggleCart} />
       <div>
         <Outlet />
-        {cartIsVisible && <Cart cart={cart} />}
+        {cartIsVisible && <Cart toggleCart={toggleCart} />}
       </div>
       <Footer />
     </Background>

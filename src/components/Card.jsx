@@ -23,7 +23,7 @@ export default function Card({id, card}) {
   }
 
   const handleManualInput = (e) => {
-    setItemsNumb(e.target.value);
+    setItemsNumb(parseInt(e.target.value) || 0);
   }
 
   const handleAddToCart = (e, itemsNumb) => {
@@ -48,6 +48,7 @@ export default function Card({id, card}) {
         })
       }))
     }
+    setItemsNumb(0);
     console.log(cart);
   }
 
@@ -67,7 +68,7 @@ export default function Card({id, card}) {
         <input value={itemsNumb} onChange={handleManualInput} />
         <CgAddR size={25} onClick={addItem} />
           <button
-            onClick={(e) => handleAddToCart(e,itemsNumb)}
+            onClick={(e) => handleAddToCart(e, itemsNumb)}
             data-name={card.name}
             data-img={card.imageUrl}
             data-price={price[card.rarity]}

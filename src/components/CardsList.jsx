@@ -5,7 +5,7 @@ export default function CardsList({cards}) {
 
   return (
     <CardList>
-      {cards.map(card => <Card id={card.id} card={card} />)}
+      {cards.map(card => <Card key={card.id} card={card} />)}
     </CardList>
   )
 }

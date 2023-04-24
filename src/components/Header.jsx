@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -8,8 +8,6 @@ export default function Header({toggleCart}) {
 
   const { cart } = useContext(CartContext);
   const itemsNumb = cart.items.reduce((accum, item) => accum + item.number, 0);
-
-  useEffect(() => console.log(cart), []);
 
   return (
     <NavBar>

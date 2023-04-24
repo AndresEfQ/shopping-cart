@@ -3,13 +3,38 @@ import { CartContext } from "../context/CartContext";
 import styled from "styled-components";
 import { FaTrashAlt } from "react-icons/fa";
 
-export default function Cart() {
+export default function Cart({toggleCart}) {
 
   const {cart, setCart} = useContext(CartContext);
 
+  const subtotal = cart.items.reduce((current, item) => current + (item.price * item.number), 0)
+
+  const removeFromCart = (e) => {
+
+    setCart(prevCart => {
+      const itemToRemove = prevCart.items.find(item => item.name === e.target.dataset.name)
+      console.log(itemToRemove);
+      if (itemToRemove.number === 1) {
+        return ({
+          items: prevCart.items.filter(item => item.name !== itemToRemove.name)
+        })
+      } else {
+        return ({
+          items: prevCart.items.map(item => {
+            if (item.name === itemToRemove.name) {
+              return {...item, number: item.number - 1}
+            } else {
+              return item;
+            }
+          })
+        })
+      }
+    })
+  }
+
   return (
-    <CartDiv>
-      {cart.items.map(item => <CartItem>
+    <CartDiv onClick={toggleCart}>
+      {cart.items.length ? cart.items.map(item => <CartItem onClick={(e) => e.stopPropagation()} key={item.name}>
         <img src={item.img} alt={item.name} />
         <InfoDiv>
           <h3>{item.name}</h3>
@@ -24,9 +49,15 @@ export default function Cart() {
             </li>
           </ul>
         </InfoDiv>
-        <FaTrashAlt color="var(--grey)" />
-      </CartItem>)}
-      
+        <button onClick={removeFromCart} data-name={item.name}>
+          <FaTrashAlt color="var(--grey)" />
+        </button>
+      </CartItem>) : <CartItem onClick={(e) => e.stopPropagation()}><em>There are no items in the cart</em></CartItem>}
+      <hr />
+      <CartItem onClick={(e) => e.stopPropagation()}>
+        <span>Subtotal</span>
+        <span>{new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(subtotal)}</span>
+      </CartItem>
     </CartDiv>
   )
 }
@@ -36,12 +67,16 @@ const CartDiv = styled.div`
   right: 0;
   width: 100%;
   height: 88vh;
-  background-color: var(--secondary-op60);
+  background-color: var(--secondary-op90);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 1rem;
+
+  & hr {
+    width: 20vw;
+  }
 `;
 
 const CartItem = styled.div`
@@ -54,6 +89,20 @@ const CartItem = styled.div`
 
   & img {
     width: 15%;
+  }
+
+  & svg {
+    pointer-events: none;
+  }
+
+  & button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  & button:active {
+    transform: scale(0.95);
   }
 `;
 
