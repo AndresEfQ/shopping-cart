@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart component Cart renders correctly 1`] = `
+<div>
+  <div
+    class="sc-iAEyYk hKCpMB"
+  >
+    <div
+      class="sc-fsQiph fMIvXc"
+    >
+      <em>
+        There are no items in the cart
+      </em>
+    </div>
+    <hr />
+    <div
+      class="sc-fsQiph fMIvXc"
+    >
+      <span>
+        Subtotal
+      </span>
+      <span
+        data-testid="subtotal"
+      >
+        $0.00
+      </span>
+    </div>
+  </div>
+</div>
+`;

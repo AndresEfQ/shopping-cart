@@ -64,9 +64,9 @@ export default function Card({id, card}) {
         </li>
       </ul>
       <div>
-        <CgRemoveR size={25} onClick={removeItem} />
+        <CgRemoveR size={25} onClick={removeItem} data-testid="remove-card" />
         <input value={itemsNumb} onChange={handleManualInput} />
-        <CgAddR size={25} onClick={addItem} />
+        <CgAddR size={25} onClick={addItem} data-testid="add-card" />
           <button
             onClick={(e) => handleAddToCart(e, itemsNumb)}
             data-name={card.name}

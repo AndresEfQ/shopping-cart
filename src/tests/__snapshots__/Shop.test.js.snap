@@ -13,12 +13,11 @@ exports[`Shop component Renders correctly 1`] = `
         value=""
       />
       <svg
-        color="#777"
+        color="var(--grey)"
         fill="currentColor"
         height="1em"
         stroke="currentColor"
         stroke-width="0"
-        style="color: rgb(119, 119, 119);"
         viewBox="0 0 512 512"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +27,7 @@ exports[`Shop component Renders correctly 1`] = `
         />
       </svg>
       <aside
-        class="sc-hLseeU igTKrR"
+        class="sc-hLseeU gzEFlC"
       >
         <div
           data-simplebar="init"
@@ -95,17 +94,30 @@ exports[`Shop component Renders correctly 1`] = `
       </aside>
     </div>
     <div
-      class="sc-gueYoa dMoZjR"
+      class="sc-gueYoa cuLqIG"
     >
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Liege of the Axe"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=39603&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Liege of the Axe
+            </h3>
+          </li>
+          <li>
+            <p>
+              $1.20
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -129,6 +141,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -148,20 +161,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=39603&type=card"
+            data-name="Liege of the Axe"
+            data-price="1.2"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Goblin Dynamo"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42274&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Goblin Dynamo
+            </h3>
+          </li>
+          <li>
+            <p>
+              $1.20
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -185,6 +215,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -204,20 +235,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42274&type=card"
+            data-name="Goblin Dynamo"
+            data-price="1.2"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Mistform Sliver"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42037&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Mistform Sliver
+            </h3>
+          </li>
+          <li>
+            <p>
+              $0.50
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -241,6 +289,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -260,20 +309,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42037&type=card"
+            data-name="Mistform Sliver"
+            data-price="0.5"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Earthblighter"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42171&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Earthblighter
+            </h3>
+          </li>
+          <li>
+            <p>
+              $1.20
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -297,6 +363,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -316,20 +383,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42171&type=card"
+            data-name="Earthblighter"
+            data-price="1.2"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Lowland Tracker"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45131&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Lowland Tracker
+            </h3>
+          </li>
+          <li>
+            <p>
+              $0.50
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -353,6 +437,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -372,20 +457,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45131&type=card"
+            data-name="Lowland Tracker"
+            data-price="0.5"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Goblin Grappler"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45125&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Goblin Grappler
+            </h3>
+          </li>
+          <li>
+            <p>
+              $0.50
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -409,6 +511,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -428,20 +531,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45125&type=card"
+            data-name="Goblin Grappler"
+            data-price="0.5"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Bloodstoke Howler"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44209&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Bloodstoke Howler
+            </h3>
+          </li>
+          <li>
+            <p>
+              $0.50
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -465,6 +585,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -484,20 +605,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44209&type=card"
+            data-name="Bloodstoke Howler"
+            data-price="0.5"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Ward Sliver"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44296&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Ward Sliver
+            </h3>
+          </li>
+          <li>
+            <p>
+              $1.20
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -521,6 +659,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -540,20 +679,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44296&type=card"
+            data-name="Ward Sliver"
+            data-price="1.2"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Hunter Sliver"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44772&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Hunter Sliver
+            </h3>
+          </li>
+          <li>
+            <p>
+              $0.50
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -577,6 +733,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -596,20 +753,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44772&type=card"
+            data-name="Hunter Sliver"
+            data-price="0.5"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Beacon of Destiny"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44496&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Beacon of Destiny
+            </h3>
+          </li>
+          <li>
+            <p>
+              $3.00
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -633,6 +807,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -652,20 +827,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44496&type=card"
+            data-name="Beacon of Destiny"
+            data-price="3"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Mistform Seaswift"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=43721&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Mistform Seaswift
+            </h3>
+          </li>
+          <li>
+            <p>
+              $0.50
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -689,6 +881,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -708,20 +901,37 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=43721&type=card"
+            data-name="Mistform Seaswift"
+            data-price="0.5"
+          >
             Add to cart
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB eSVJYC"
+        class="sc-beqWaB gmIkbn"
       >
         <img
           alt="Cloudreach Cavalry"
           src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45839&type=card"
         />
+        <ul>
+          <li>
+            <h3>
+              Cloudreach Cavalry
+            </h3>
+          </li>
+          <li>
+            <p>
+              $1.20
+            </p>
+          </li>
+        </ul>
         <div>
           <svg
+            data-testid="remove-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -745,6 +955,7 @@ exports[`Shop component Renders correctly 1`] = `
             value="0"
           />
           <svg
+            data-testid="add-card"
             fill="none"
             height="25"
             stroke="currentColor"
@@ -764,7 +975,11 @@ exports[`Shop component Renders correctly 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-          <button>
+          <button
+            data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45839&type=card"
+            data-name="Cloudreach Cavalry"
+            data-price="1.2"
+          >
             Add to cart
           </button>
         </div>

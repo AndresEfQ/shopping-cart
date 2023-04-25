@@ -34,29 +34,51 @@ export default function Cart({toggleCart}) {
 
   return (
     <CartDiv onClick={toggleCart}>
-      {cart.items.length ? cart.items.map(item => <CartItem onClick={(e) => e.stopPropagation()} key={item.name}>
-        <img src={item.img} alt={item.name} />
-        <InfoDiv>
-          <h3>{item.name}</h3>
-          <ul>
-            <li>
-              <span>Cards Ammount:</span>
-              <span>{item.number}</span>
-            </li>
-            <li>
-              <span>Total:</span>
-              <span>{new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(item.price * item.number)}</span>
-            </li>
-          </ul>
-        </InfoDiv>
-        <button onClick={removeFromCart} data-name={item.name}>
-          <FaTrashAlt color="var(--grey)" />
-        </button>
-      </CartItem>) : <CartItem onClick={(e) => e.stopPropagation()}><em>There are no items in the cart</em></CartItem>}
+      {cart.items.length ? 
+        cart.items.map(item => 
+          <CartItem onClick={(e) => e.stopPropagation()} key={item.name}>
+            <img src={item.img} alt={item.name} />
+            <InfoDiv>
+              <h3>{item.name}</h3>
+              <ul>
+                <li>
+                  <span>Cards Ammount:</span>
+                  <span data-testid="cards-number">{item.number}</span>
+                </li>
+                <li>
+                  <span>Total:</span>
+                  <span data-testid="cards-price">
+                    {new Intl.NumberFormat('en-US', {
+                      style: 'currency', 
+                      currency: 'USD'
+                      }).format(item.price * item.number)
+                    }
+                  </span>
+                </li>
+              </ul>
+            </InfoDiv>
+            <button 
+              onClick={removeFromCart} 
+              data-name={item.name} 
+              data-testid="remove-from-cart"
+            >
+              <FaTrashAlt color="var(--grey)" />
+            </button>
+          </CartItem>) : 
+        <CartItem onClick={(e) => e.stopPropagation()}>
+          <em>There are no items in the cart</em>
+        </CartItem>
+      }
       <hr />
       <CartItem onClick={(e) => e.stopPropagation()}>
         <span>Subtotal</span>
-        <span>{new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(subtotal)}</span>
+        <span data-testid="subtotal">
+          {new Intl.NumberFormat('en-US', {
+            style: 'currency', 
+            currency: 'USD'
+            }).format(subtotal)
+          }
+        </span>
       </CartItem>
     </CartDiv>
   )
