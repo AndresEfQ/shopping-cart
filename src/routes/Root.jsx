@@ -27,8 +27,7 @@ export default function Root() {
 }
 
 const Background = styled.div`
-  background-image: url("https://g.foolcdn.com/editorial/images/519804/hasbro-magic-gaming-source-mtg.jpg");
-  height: 100vh;
+  background: no-repeat center url("https://g.foolcdn.com/editorial/images/519804/hasbro-magic-gaming-source-mtg.jpg");
 
   & > div {
     height: 88vh;

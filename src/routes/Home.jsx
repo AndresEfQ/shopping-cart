@@ -26,6 +26,11 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  @media only screen and (max-width: 400px) {
+    font-size: 3rem;
+    margin: 0;
+  }
+
   & p {
     text-align: center;
   }
@@ -45,9 +50,18 @@ const Cell = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
+  @media only screen and (max-width: 490px) {
+    grid-template-columns: 1fr;
+  }
+
   & > div {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media only screen and (max-width: 490px) {
+    height: 45vh;
+    justify-content: space-between;
+  }
   }
 `;

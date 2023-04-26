@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function Footer() {
   return (
     <Container>
-      Copyright © <Anchor href="https://github.com/AndresEfQ/Bitacora-digital">AndresEfQ 2023 <FaGithub /></Anchor>
+      Copyright © <Anchor href="https://github.com/AndresEfQ/shopping-cart">AndresEfQ 2023 <FaGithub /></Anchor>
     </Container>
   )
 }
