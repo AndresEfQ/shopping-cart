@@ -1,24 +1,15 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgMenu, CgClose } from "react-icons/cg";
 
-export default function Header({toggleCart}) {
+export default function Header({toggleCart, windowWidth}) {
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { cart } = useContext(CartContext);
   const itemsNumb = cart.items.reduce((accum, item) => accum + item.number, 0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleResizeWindow = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResizeWindow);
-    return () => {
-      window.removeEventListener("resize", handleResizeWindow);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(prevIsMobileMenuOpen => !prevIsMobileMenuOpen);
@@ -31,25 +22,28 @@ export default function Header({toggleCart}) {
       <li><Link to={"/shop"}>Shop</Link></li>
       <li><Link>Contact</Link></li>
       <li>
-        <FaShoppingCart onClick={toggleCart} />
+        <FaShoppingCart size={28} onClick={toggleCart} />
         {itemsNumb ? <NumberNotification>{itemsNumb}</NumberNotification> : null}
+      </li>
+    </Menu>
+  } else if (isMobileMenuOpen) {
+    menu = <Menu>
+      <li>
+        <CgClose onClick={toggleMenu} />  
       </li>
     </Menu>
   } else {
     menu = <Menu>
       <li>
-        <FaShoppingCart onClick={toggleCart} />
+        <FaShoppingCart size={28} onClick={toggleCart} />
         {itemsNumb ? <NumberNotification>{itemsNumb}</NumberNotification> : null}
       </li>
-      {isMobileMenuOpen ? 
-        <li>
-          <CgMenu onClick={toggleMenu} />
-        </li> :
-        <li>
-          <CgClose onClick={toggleMenu} />  
-        </li>}
+      <li>
+        <CgMenu size={28} onClick={toggleMenu} />
+      </li>
     </Menu>
   }
+
 
   return (
     <NavBar>
@@ -57,6 +51,12 @@ export default function Header({toggleCart}) {
         <Icon>Magic Store</Icon>
       </Link>
       {menu}
+      {isMobileMenuOpen && 
+        <FloatingMenu>
+          <li><Link to={"/"}>Home</Link></li>
+          <li><Link to={"/shop"}>Shop</Link></li>
+          <li><Link>Contact</Link></li>
+        </FloatingMenu>}
     </NavBar>
   )
 }
@@ -106,6 +106,29 @@ const Menu = styled.ul`
   a {
     color: inherit;
     text-decoration: none;
+  } 
+
+  & > svg {
+    z-index: 2;
+  }
+`;
+
+const FloatingMenu = styled.ul`
+  position: absolute;
+  top: 3vh;
+  right: 1rem;
+  list-style: none;
+  font-size: 2rem;
+  background-color: var(--op90);
+  border-radius: 7px;
+  
+  a {
+    color: black;
+    text-decoration: none;
+  } 
+
+  & > li {
+    margin: 2rem 4rem;
   }
 `;
 

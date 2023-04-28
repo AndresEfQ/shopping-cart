@@ -72,14 +72,14 @@ export default function Card({id, card}) {
             data-name={card.name}
             data-img={card.imageUrl}
             data-price={price[card.rarity]}
-          >Add to cart</button>
+          >Add</button>
       </div>
     </CardDiv>
   )
 }
 
 const CardDiv = styled.div`
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   background-color: var(--op80);
   border-radius: 10px;
   display: flex;

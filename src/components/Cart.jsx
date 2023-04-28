@@ -98,6 +98,10 @@ const CartDiv = styled.div`
 
   & hr {
     width: 20vw;
+
+    @media only screen and (max-width: 490px) {
+      width: 100%;
+    }
   }
 `;
 
@@ -108,6 +112,10 @@ const CartItem = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
+
+  @media only screen and (max-width: 490px) {
+    width: 100%;
+  }
 
   & img {
     width: 15%;

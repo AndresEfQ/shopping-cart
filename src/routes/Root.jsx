@@ -31,6 +31,7 @@ const Background = styled.div`
 
   & > div {
     height: 88vh;
+    width: 100%;
     display: flex;
   }
 `

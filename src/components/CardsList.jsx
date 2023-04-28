@@ -19,6 +19,15 @@ const CardList = styled.div`
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1rem;
   row-gap: 1.5rem;
+  overflow-y: scroll;
+
+  @media only screen and (max-width: 490px) {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    margin: 0;
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
 
   div, img {
     border-radius: 10px;

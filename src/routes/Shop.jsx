@@ -7,7 +7,7 @@ import DotLoader from "react-spinners/DotLoader";
 import CardsList from "../components/CardsList";
 import backupData from "../assets/cache";
 
-export default function Shop() {
+export default function Shop({windowWidth}) {
 
   const [apiResponse, setApiResponse] = useState();
   const [sets, setSets] = useState();
@@ -37,9 +37,11 @@ export default function Shop() {
   }
 
   const handleSelectSet = (e) => {
-    console.log(e.target.id)
+    e.preventDefault();
     setIsLoadingCards(true);
-    fetch(`https://api.magicthegathering.io/v1/cards?set=${e.target.id}&random=true&pageSize=12`)
+    const set = e.target.id || e.target[0].value
+    console.log(e.target[0].value)
+    fetch(`https://api.magicthegathering.io/v1/cards?set=${set}&random=true&pageSize=12`)
     .then(response => response.json())
     .then(response => {
       setCards(response.cards);
@@ -51,28 +53,46 @@ export default function Shop() {
 
   return (
     <ShopDiv>
-      <div>
-        <SearchBar
-          type="search"
-          placeholder="Search Sets"
-          onChange={handleSearchInputChange}
-          value={searchInput}
-        />
-        <FaSearch color="var(--grey)"/>
-        <SideBar>
-          <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>
-            {sets
-              ? sets.map(set => {
-                return (
-                  <SetSelector
-                    key={set.code}
-                    id={set.code}
-                    onClick={handleSelectSet}>{set.name}
-                  </SetSelector>)})
-              : <span>loading</span>}
-          </SimpleBar>
-        </SideBar>
-      </div>
+      {(windowWidth > 490) ? 
+        <div>
+          <SearchBar
+            type="search"
+            placeholder="Search Sets"
+            onChange={handleSearchInputChange}
+            value={searchInput}
+          />
+          <FaSearch color="var(--grey)"/>
+          <SideBar>
+            <SimpleBar style={{maxHeight: "80vh", width: "15vw"}}>
+              {sets
+                ? sets.map(set => {
+                  return (
+                    <SetSelector
+                      key={set.code}
+                      id={set.code}
+                      onClick={handleSelectSet}>{set.name}
+                    </SetSelector>
+                  )})
+                : <span>loading</span>}
+            </SimpleBar>
+          </SideBar>
+        </div> : 
+        <form onSubmit={handleSelectSet}>
+          <label htmlFor="sets">Choose a set:</label>
+          <input list="setsList" id="sets" name="sets" />
+          <datalist id="setsList">
+            {sets && sets.map(set => {
+              return (
+                <option
+                  key={set.code}
+                  data-code={set.code}
+                  value={set.code}
+                >{set.name}</option>
+              )})}
+          </datalist>
+          <button>OK</button>
+        </form>
+      }
       {cards ? <CardsList cards={cards} /> : <Shade><DotLoader color="var(--main)" /></Shade>}
       {isLoadingCards && <Shade><DotLoader color="var(--main)" /></Shade>}            
     </ShopDiv>
@@ -84,10 +104,19 @@ const ShopDiv = styled.div`
   position: relative;
   display: flex;
 
+  @media only screen and (max-width: 490px) {
+    flex-direction: column;
+    width: 100%
+  }
+
   & > div > svg {
     position: absolute;
     top: 2.6vh;
     left: 2rem;
+  }
+
+  & > input {
+    width: 60%;
   }
 `
 

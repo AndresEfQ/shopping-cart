@@ -18,6 +18,10 @@ const Container = styled.footer`
   padding: 0.4rem;
   text-align: center;
   text-shadow: 0 0 10px rgb(0, 0, 0);
+
+  @media only screen and (max-width: 490px) {
+    background: var(--secondary-op90);
+  }
 `;
 
 const Anchor = styled.a`
