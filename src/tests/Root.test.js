@@ -18,7 +18,7 @@ describe("Root component", () => {
   });
 
   test("Shop button has shop link", () => {
-    render(<CartContextProvider><Root windowWidth="1866" /></CartContextProvider>, {wrapper: BrowserRouter});
+    render(<CartContextProvider><Root windowWidth="1866"u /></CartContextProvider>, {wrapper: BrowserRouter});
 
     expect(screen.getByRole("link", {name: "Shop"}).href).toMatch("/shop");
   });

@@ -1,8 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
-import { act } from "react-dom/test-utils";
-import userEvent from "@testing-library/user-event";
+import { BrowserRouter } from "react-router-dom";
 import Home from "../routes/Home";
 
 describe("Home component", () => {
