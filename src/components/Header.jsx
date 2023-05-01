@@ -19,7 +19,7 @@ export default function Header({toggleCart, windowWidth}) {
   let menu;
   if (windowWidth > 920) {
     menu = <Menu>
-      <li><Link to={"/"}>Home</Link></li>
+      <li><Link to={"/shopping-cart/"}>Home</Link></li>
       <li><Link to={"/shop"}>Shop</Link></li>
       <li><Link>Contact</Link></li>
       <li>
@@ -48,7 +48,7 @@ export default function Header({toggleCart, windowWidth}) {
 
   return (
     <NavBar>
-      <Link to={"/"}>
+      <Link to={"/shopping-cart/"}>
         <Icon>Magic Store</Icon>
       </Link>
       {menu}

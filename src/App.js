@@ -25,7 +25,7 @@ function App() {
       element: <Root windowWidth={windowWidth} />,
        children: [
         {
-          path: "/",
+          path: "/shopping-cart/",
           element: <Home />,
         },
         {
