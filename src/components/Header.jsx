@@ -8,7 +8,8 @@ import { CgMenu, CgClose } from "react-icons/cg";
 export default function Header({toggleCart, windowWidth}) {
 
   const { cart } = useContext(CartContext);
-  const itemsNumb = cart.items.reduce((accum, item) => accum + item.number, 0);
+  let itemsNumb = cart.items.reduce((accum, item) => accum + item.number, 0);
+  if (itemsNumb > 99) itemsNumb = '99+';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,7 +17,7 @@ export default function Header({toggleCart, windowWidth}) {
   }
 
   let menu;
-  if (windowWidth > 490) {
+  if (windowWidth > 920) {
     menu = <Menu>
       <li><Link to={"/"}>Home</Link></li>
       <li><Link to={"/shop"}>Shop</Link></li>
@@ -63,15 +64,17 @@ export default function Header({toggleCart, windowWidth}) {
 
 const NavBar = styled.nav`
   padding: 0 5rem;
-  height: 12vh;
-  width: 100vw;
+  height: 10vh;
+  width: 100%;
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--grey-op70);
+  position: absolute;
+  top: 0;
 
-  @media only screen and (max-width: 490px) {
+  @media only screen and (max-width: 920px) {
     padding: 0 1rem;
   }
 
@@ -86,7 +89,7 @@ const Icon = styled.h1`
   text-decoration: none;
   color: black;
 
-  @media only screen and (max-width: 490px) {
+  @media only screen and (max-width: 920px) {
     font-size: 2rem;
   }
 `;
@@ -146,4 +149,5 @@ const NumberNotification = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow: 1px 1px 1px black;
 `;

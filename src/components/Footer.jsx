@@ -12,16 +12,14 @@ export default function Footer() {
 const Container = styled.footer`
   font-size: 1.5rem;
   width: 100%;
+  height: 6vh;
   position: fixed;
   bottom: 0;
   color: rgb(255, 255, 255);
   padding: 0.4rem;
   text-align: center;
   text-shadow: 0 0 10px rgb(0, 0, 0);
-
-  @media only screen and (max-width: 490px) {
-    background: var(--secondary-op90);
-  }
+  background: var(--secondary-op90);
 `;
 
 const Anchor = styled.a`

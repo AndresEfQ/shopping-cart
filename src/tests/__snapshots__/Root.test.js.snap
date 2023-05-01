@@ -3,22 +3,22 @@
 exports[`Root component Root renders correctly 1`] = `
 <div>
   <div
-    class="sc-qRumB emtOVw"
+    class="sc-jsMahE juXzZs"
   >
     <nav
-      class="sc-beqWaB fibcKs"
+      class="sc-beqWaB cPhTkj"
     >
       <a
         href="/"
       >
         <h1
-          class="sc-gueYoa kPTkoF"
+          class="sc-gueYoa fWafkR"
         >
           Magic Store
         </h1>
       </a>
       <ul
-        class="sc-dmqHEX cYJNln"
+        class="sc-dmqHEX jNhhdZ"
       >
         <li>
           <a
@@ -44,11 +44,11 @@ exports[`Root component Root renders correctly 1`] = `
         <li>
           <svg
             fill="currentColor"
-            height="1em"
+            height="28"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 576 512"
-            width="1em"
+            width="28"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -60,12 +60,12 @@ exports[`Root component Root renders correctly 1`] = `
     </nav>
     <div />
     <footer
-      class="sc-eDDNvR btRJZG"
+      class="sc-jTrPJq ljlZtm"
     >
       Copyright © 
       <a
-        class="sc-jTrPJq gCkSum"
-        href="https://github.com/AndresEfQ/Bitacora-digital"
+        class="sc-gLDzan dIEA-DD"
+        href="https://github.com/AndresEfQ/shopping-cart"
       >
         AndresEfQ 2023 
         <svg

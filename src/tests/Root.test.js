@@ -7,18 +7,18 @@ import CartContextProvider from "../context/CartContext";
 describe("Root component", () => {
 
   test("Root renders correctly", () => {
-    const { container } = render(<CartContextProvider><Root /></CartContextProvider>, {wrapper: BrowserRouter});
+    const { container } = render(<CartContextProvider><Root windowWidth="1866" /></CartContextProvider>, {wrapper: BrowserRouter});
     expect(container).toMatchSnapshot();
   });
 
   test("Home button has home link", () => {
-    render(<CartContextProvider><Root /></CartContextProvider>, {wrapper: BrowserRouter});
+    render(<CartContextProvider><Root windowWidth="1866" /></CartContextProvider>, {wrapper: BrowserRouter});
 
     expect(screen.getByRole("link", {name: "Home"}).href).toMatch("/");
   });
 
   test("Shop button has shop link", () => {
-    render(<CartContextProvider><Root /></CartContextProvider>, {wrapper: BrowserRouter});
+    render(<CartContextProvider><Root windowWidth="1866" /></CartContextProvider>, {wrapper: BrowserRouter});
 
     expect(screen.getByRole("link", {name: "Shop"}).href).toMatch("/shop");
   });

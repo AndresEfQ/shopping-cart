@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { CgAddR, CgRemoveR } from "react-icons/cg"
 import styled from "styled-components";
+import StyledButton from "./StyledButton";
 
 export default function Card({id, card}) {
 
@@ -67,12 +68,12 @@ export default function Card({id, card}) {
         <CgRemoveR size={25} onClick={removeItem} data-testid="remove-card" />
         <input value={itemsNumb} onChange={handleManualInput} />
         <CgAddR size={25} onClick={addItem} data-testid="add-card" />
-          <button
+          <StyledButton
             onClick={(e) => handleAddToCart(e, itemsNumb)}
             data-name={card.name}
             data-img={card.imageUrl}
             data-price={price[card.rarity]}
-          >Add</button>
+          >Add</StyledButton>
       </div>
     </CardDiv>
   )
@@ -89,6 +90,10 @@ const CardDiv = styled.div`
 
   & > img {
     width: 80%;
+  }
+
+  & h3 {
+    text-align: center;
   }
 
   & ul {
@@ -121,22 +126,5 @@ const CardDiv = styled.div`
     text-align: center;
     border-radius: 3px;
     border: none;
-  }
-
-  & button {
-    background-color: var(--main);
-    background: linear-gradient(13deg, var(--main) 0%, var(--secondary) 100%);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 7px;
-    padding: 4px 8px;
-    margin-left: 1rem;
-    cursor: pointer;
-  }
-
-  & button:active {
-    color: var(--grey);
-    transform: scale(0.95);
   }
 `;

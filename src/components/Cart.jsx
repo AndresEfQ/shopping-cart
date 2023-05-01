@@ -115,20 +115,34 @@ const CartItem = styled.div`
 
   @media only screen and (max-width: 490px) {
     width: 100%;
+    padding: 0.5rem;
   }
 
   & img {
     width: 15%;
+
+    @media only screen and (max-width: 490px) {
+      width: 25%;
+    }
   }
 
   & svg {
     pointer-events: none;
+
+    @media only screen and (max-width: 490px) {
+      transform: scale(2);
+    }
   }
 
   & button {
     border: none;
     background: none;
     cursor: pointer;
+
+    @media only screen and (max-width: 490px) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   & button:active {
@@ -138,6 +152,10 @@ const CartItem = styled.div`
 
 const InfoDiv = styled.div`
   width: 10vw;
+
+  @media only screen and (max-width: 490px) {
+    width: 50vw;
+  }
 
   & h3 {
     border-bottom: 1px solid var(--grey);

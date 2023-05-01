@@ -3,10 +3,10 @@
 exports[`Cart component Cart renders correctly 1`] = `
 <div>
   <div
-    class="sc-iAEyYk hKCpMB"
+    class="sc-fsQiph dRhvcl"
   >
     <div
-      class="sc-fsQiph fMIvXc"
+      class="sc-qRumB dheAZg"
     >
       <em>
         There are no items in the cart
@@ -14,7 +14,7 @@ exports[`Cart component Cart renders correctly 1`] = `
     </div>
     <hr />
     <div
-      class="sc-fsQiph fMIvXc"
+      class="sc-qRumB dheAZg"
     >
       <span>
         Subtotal

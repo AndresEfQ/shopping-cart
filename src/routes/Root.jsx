@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Cart from "../components/Cart";
 import styled from "styled-components";
 
-export default function Root() {
+export default function Root({windowWidth}) {
 
   const [cartIsVisible, setCartIsVisible] = useState(false);
 
@@ -16,7 +16,7 @@ export default function Root() {
 
   return (
     <Background>
-      <Header toggleCart={toggleCart} />
+      <Header toggleCart={toggleCart} windowWidth={windowWidth} />
       <div>
         <Outlet />
         {cartIsVisible && <Cart toggleCart={toggleCart} />}
@@ -30,7 +30,8 @@ const Background = styled.div`
   background: no-repeat center url("https://g.foolcdn.com/editorial/images/519804/hasbro-magic-gaming-source-mtg.jpg");
 
   & > div {
-    height: 88vh;
+    margin-top: 10vh;
+    height: 90vh;
     width: 100%;
     display: flex;
   }

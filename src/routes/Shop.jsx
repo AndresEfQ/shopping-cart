@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css"
 import { FaSearch } from "react-icons/fa";
 import DotLoader from "react-spinners/DotLoader";
 import CardsList from "../components/CardsList";
 import backupData from "../assets/cache";
+import styled from "styled-components";
+import StyledButton from "../components/StyledButton";
 
 export default function Shop({windowWidth}) {
 
@@ -15,9 +16,15 @@ export default function Shop({windowWidth}) {
   const [isLoadingCards, setIsLoadingCards] = useState(false);
   const [searchInput, setSearchInput] = useState("");
 
+  const controller = new AbortController();
+  const signal = controller.signal;
+
   useEffect(() => {
 
-    fetch("https://api.magicthegathering.io/v1/sets")
+    fetch("https://api.magicthegathering.io/v1/sets", {
+      method: "get",
+      signal: signal,
+    })
     .then(response => response.json())
     .then(response => {
       setApiResponse(response.sets);
@@ -41,7 +48,10 @@ export default function Shop({windowWidth}) {
     setIsLoadingCards(true);
     const set = e.target.id || e.target[0].value
     console.log(e.target[0].value)
-    fetch(`https://api.magicthegathering.io/v1/cards?set=${set}&random=true&pageSize=12`)
+    fetch(`https://api.magicthegathering.io/v1/cards?set=${set}&random=true&pageSize=12`, {
+      method: "get",
+      signal: signal,
+    })
     .then(response => response.json())
     .then(response => {
       setCards(response.cards);
@@ -51,9 +61,14 @@ export default function Shop({windowWidth}) {
     .catch(err => console.log(err));
   }
 
+  const handleAbortRequest = () => {
+    controller.abort();
+    setIsLoadingCards(false);
+  }
+
   return (
     <ShopDiv>
-      {(windowWidth > 490) ? 
+      {(windowWidth > 920) ? 
         <div>
           <SearchBar
             type="search"
@@ -79,7 +94,7 @@ export default function Shop({windowWidth}) {
         </div> : 
         <form onSubmit={handleSelectSet}>
           <label htmlFor="sets">Choose a set:</label>
-          <input list="setsList" id="sets" name="sets" />
+          <input list="setsList" id="sets" name="sets" className="select" />
           <datalist id="setsList">
             {sets && sets.map(set => {
               return (
@@ -90,11 +105,19 @@ export default function Shop({windowWidth}) {
                 >{set.name}</option>
               )})}
           </datalist>
-          <button>OK</button>
+          <StyledButton>OK</StyledButton>
         </form>
       }
-      {cards ? <CardsList cards={cards} /> : <Shade><DotLoader color="var(--main)" /></Shade>}
-      {isLoadingCards && <Shade><DotLoader color="var(--main)" /></Shade>}            
+      <CardsList cards={cards} />
+      {isLoadingCards && 
+        <Shade>
+          <DotLoader color="var(--main)" />
+          <div>
+            <h4>We are currently fetching data from the server, it may take a few seconds, or you may cancel the request and keep buying cards from the current set</h4>
+            <StyledButton onClick={handleAbortRequest}>Cancel Request</StyledButton>
+          </div>
+        </Shade>
+      }            
     </ShopDiv>
   )
 }
@@ -104,9 +127,21 @@ const ShopDiv = styled.div`
   position: relative;
   display: flex;
 
-  @media only screen and (max-width: 490px) {
+  @media only screen and (max-width: 920px) {
     flex-direction: column;
-    width: 100%
+    width: 100%;
+
+    form {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 1rem;
+      color: white;
+    }
+    
+    .select {
+      width: 45vw;
+    }
   }
 
   & > div > svg {
@@ -114,11 +149,7 @@ const ShopDiv = styled.div`
     top: 2.6vh;
     left: 2rem;
   }
-
-  & > input {
-    width: 60%;
-  }
-`
+`;
 
 const SideBar = styled.aside`
   height: 80vh;
@@ -157,8 +188,18 @@ const Shade = styled.div`
   width: 100vw;
   position: absolute;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   background: var(--op80);
   z-index: 3;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    text-align: center;
+  }
 `;

@@ -3,101 +3,34 @@
 exports[`Shop component Renders correctly 1`] = `
 <div>
   <div
-    class="sc-dmqHEX iZZeSW"
+    class="sc-hLseeU lmrRCH"
   >
-    <div>
+    <form>
+      <label
+        for="sets"
+      >
+        Choose a set:
+      </label>
       <input
-        class="sc-eDDNvR eEqvGX"
-        placeholder="Search Sets"
-        type="search"
-        value=""
+        class="select"
+        id="sets"
+        list="setsList"
+        name="sets"
       />
-      <svg
-        color="var(--grey)"
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 512 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
+      <datalist
+        id="setsList"
+      />
+      <button
+        class="sc-beqWaB pCnun"
       >
-        <path
-          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-        />
-      </svg>
-      <aside
-        class="sc-hLseeU gzEFlC"
-      >
-        <div
-          data-simplebar="init"
-          style="max-height: 80vh; width: 15vw;"
-        >
-          <div
-            class="simplebar-wrapper"
-          >
-            <div
-              class="simplebar-height-auto-observer-wrapper"
-            >
-              <div
-                class="simplebar-height-auto-observer"
-              />
-            </div>
-            <div
-              class="simplebar-mask"
-            >
-              <div
-                class="simplebar-offset"
-                style="right: 0px; bottom: 0px;"
-              >
-                <div
-                  aria-label="scrollable content"
-                  class="simplebar-content-wrapper"
-                  role="region"
-                  style="height: auto; overflow-x: hidden; overflow-y: hidden;"
-                  tabindex="0"
-                >
-                  <div
-                    class="simplebar-content"
-                  >
-                    <span>
-                      loading
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="simplebar-placeholder"
-              style="width: 0px; height: 0px;"
-            />
-          </div>
-          <div
-            class="simplebar-track simplebar-horizontal"
-            style="visibility: hidden;"
-          >
-            <div
-              class="simplebar-scrollbar"
-              style="width: 0px; display: none;"
-            />
-          </div>
-          <div
-            class="simplebar-track simplebar-vertical"
-            style="visibility: hidden;"
-          >
-            <div
-              class="simplebar-scrollbar"
-              style="height: 0px; display: none;"
-            />
-          </div>
-        </div>
-      </aside>
-    </div>
+        OK
+      </button>
+    </form>
     <div
-      class="sc-gueYoa cuLqIG"
+      class="sc-dmqHEX rnGCO"
     >
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Liege of the Axe"
@@ -162,16 +95,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=39603&type=card"
             data-name="Liege of the Axe"
             data-price="1.2"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Goblin Dynamo"
@@ -236,16 +170,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42274&type=card"
             data-name="Goblin Dynamo"
             data-price="1.2"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Mistform Sliver"
@@ -310,16 +245,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42037&type=card"
             data-name="Mistform Sliver"
             data-price="0.5"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Earthblighter"
@@ -384,16 +320,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=42171&type=card"
             data-name="Earthblighter"
             data-price="1.2"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Lowland Tracker"
@@ -458,16 +395,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45131&type=card"
             data-name="Lowland Tracker"
             data-price="0.5"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Goblin Grappler"
@@ -532,16 +470,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45125&type=card"
             data-name="Goblin Grappler"
             data-price="0.5"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Bloodstoke Howler"
@@ -606,16 +545,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44209&type=card"
             data-name="Bloodstoke Howler"
             data-price="0.5"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Ward Sliver"
@@ -680,16 +620,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44296&type=card"
             data-name="Ward Sliver"
             data-price="1.2"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Hunter Sliver"
@@ -754,16 +695,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44772&type=card"
             data-name="Hunter Sliver"
             data-price="0.5"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Beacon of Destiny"
@@ -828,16 +770,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=44496&type=card"
             data-name="Beacon of Destiny"
             data-price="3"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Mistform Seaswift"
@@ -902,16 +845,17 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=43721&type=card"
             data-name="Mistform Seaswift"
             data-price="0.5"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
       <div
-        class="sc-beqWaB gmIkbn"
+        class="sc-gueYoa jMMCah"
       >
         <img
           alt="Cloudreach Cavalry"
@@ -976,11 +920,12 @@ exports[`Shop component Renders correctly 1`] = `
             />
           </svg>
           <button
+            class="sc-beqWaB pCnun"
             data-img="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45839&type=card"
             data-name="Cloudreach Cavalry"
             data-price="1.2"
           >
-            Add to cart
+            Add
           </button>
         </div>
       </div>
