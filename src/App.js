@@ -29,7 +29,7 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/shop",
+          path: "/shopping-cart/shop",
           element: <Shop windowWidth={windowWidth} />,
         },
         /*{

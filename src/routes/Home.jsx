@@ -7,7 +7,7 @@ export default function Home() {
       <Cell>
         <div>
           <p>The place to find all your MTG cards</p>
-          <Link to={"/shop"}>
+          <Link to={"/shopping-cart/shop"}>
             <button>Shop now</button>
           </Link>
         </div>

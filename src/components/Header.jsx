@@ -20,7 +20,7 @@ export default function Header({toggleCart, windowWidth}) {
   if (windowWidth > 920) {
     menu = <Menu>
       <li><Link to={"/shopping-cart/"}>Home</Link></li>
-      <li><Link to={"/shop"}>Shop</Link></li>
+      <li><Link to={"/shopping-cart/shop"}>Shop</Link></li>
       <li><Link>Contact</Link></li>
       <li>
         <FaShoppingCart size={28} onClick={toggleCart} />
@@ -54,8 +54,8 @@ export default function Header({toggleCart, windowWidth}) {
       {menu}
       {isMobileMenuOpen && 
         <FloatingMenu>
-          <li><Link to={"/"}>Home</Link></li>
-          <li><Link to={"/shop"}>Shop</Link></li>
+          <li><Link to={"/shopping-cart/"}>Home</Link></li>
+          <li><Link to={"/shopping-cart/shop"}>Shop</Link></li>
           <li><Link>Contact</Link></li>
         </FloatingMenu>}
     </NavBar>
