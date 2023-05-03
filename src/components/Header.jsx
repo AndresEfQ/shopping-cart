@@ -27,12 +27,12 @@ export default function Header({toggleCart, windowWidth}) {
         {itemsNumb ? <NumberNotification>{itemsNumb}</NumberNotification> : null}
       </li>
     </Menu>
-  } else if (isMobileMenuOpen) {
+  /* } else if (isMobileMenuOpen) {
     menu = <Menu>
       <li>
         <CgClose onClick={toggleMenu} />  
       </li>
-    </Menu>
+    </Menu> */
   } else {
     menu = <Menu>
       <li>
@@ -54,6 +54,7 @@ export default function Header({toggleCart, windowWidth}) {
       {menu}
       {isMobileMenuOpen && 
         <FloatingMenu>
+          <CgClose onClick={toggleMenu} />  
           <li><Link to={"/shopping-cart/"}>Home</Link></li>
           <li><Link to={"/shopping-cart/shop"}>Shop</Link></li>
           <li><Link>Contact</Link></li>
@@ -110,10 +111,6 @@ const Menu = styled.ul`
     color: inherit;
     text-decoration: none;
   } 
-
-  & > svg {
-    z-index: 2;
-  }
 `;
 
 const FloatingMenu = styled.ul`
@@ -124,6 +121,7 @@ const FloatingMenu = styled.ul`
   font-size: 2rem;
   background-color: var(--op90);
   border-radius: 7px;
+  z-index: 2;
   
   a {
     color: black;
@@ -132,6 +130,12 @@ const FloatingMenu = styled.ul`
 
   & > li {
     margin: 2rem 4rem;
+  }
+
+  & svg {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
   }
 `;
 

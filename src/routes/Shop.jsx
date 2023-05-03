@@ -126,6 +126,7 @@ const ShopDiv = styled.div`
 
   position: relative;
   display: flex;
+  margin-top: 10vh;
 
   @media only screen and (max-width: 920px) {
     flex-direction: column;

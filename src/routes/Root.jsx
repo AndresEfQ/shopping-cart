@@ -30,8 +30,8 @@ const Background = styled.div`
   background: no-repeat center url("https://g.foolcdn.com/editorial/images/519804/hasbro-magic-gaming-source-mtg.jpg");
 
   & > div {
-    margin-top: 10vh;
-    height: 90vh;
+    //margin-top: 10vh;
+    height: 100vh;
     width: 100%;
     display: flex;
   }
