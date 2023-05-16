@@ -28,6 +28,10 @@ const CardList = styled.div`
     padding: 1rem;
   }
 
+  @media only screen and (max-width: 360px) {
+    padding: 1rem 2.5rem;
+  }
+
   div, img {
     border-radius: 10px;
   }

@@ -145,10 +145,11 @@ const ShopDiv = styled.div`
     }
   }
 
-  & > div > svg {
-    position: absolute;
-    top: 2.6vh;
-    left: 2rem;
+  @media only screen and (max-width: 360px) {
+
+    form {
+      margin-top: 1.5rem;
+    }
   }
 `;
 

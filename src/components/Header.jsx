@@ -91,7 +91,7 @@ const Icon = styled.h1`
   color: black;
 
   @media only screen and (max-width: 920px) {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 `;
 

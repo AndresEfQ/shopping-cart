@@ -87,8 +87,9 @@ export default function Cart({toggleCart}) {
 const CartDiv = styled.div`
   position: absolute;
   right: 0;
+  top: 10vh;
   width: 100%;
-  height: 88vh;
+  height: 84vh;
   background-color: var(--secondary-op90);
   padding: 1rem;
   display: flex;
