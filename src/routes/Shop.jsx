@@ -4,14 +4,15 @@ import "simplebar-react/dist/simplebar.min.css"
 import { FaSearch } from "react-icons/fa";
 import DotLoader from "react-spinners/DotLoader";
 import CardsList from "../components/CardsList";
-import backupData from "../assets/cache";
+import backupData from "../assets/cacheCards";
+import cacheSets from "../assets/cacheSets";
 import styled from "styled-components";
 import StyledButton from "../components/StyledButton";
 
 export default function Shop({windowWidth}) {
 
   const [apiResponse, setApiResponse] = useState();
-  const [sets, setSets] = useState();
+  const [sets, setSets] = useState(cacheSets.sets);
   const [cards, setCards] = useState(backupData.cards);
   const [isLoadingCards, setIsLoadingCards] = useState(false);
   const [searchInput, setSearchInput] = useState("");
@@ -47,10 +48,11 @@ export default function Shop({windowWidth}) {
     e.preventDefault();
     setIsLoadingCards(true);
     const set = e.target.id || e.target[0].value
-    console.log(e.target[0].value)
+    console.log(set)
     fetch(`https://api.magicthegathering.io/v1/cards?set=${set}&random=true&pageSize=12`, {
       method: "get",
       signal: signal,
+      mode: "no-cors",
     })
     .then(response => response.json())
     .then(response => {
